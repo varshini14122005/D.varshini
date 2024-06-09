@@ -1,0 +1,10 @@
+number=int(input())
+if number<10:
+  print("yes")
+else:
+    for factor in range(2,10):
+        if number % factor in range(2,10):
+           print("YES")
+           break
+    else:
+         print("NO")
