@@ -1,0 +1,13 @@
+def merge_arrays(arr1, arr2):
+    merged_array = list(set(arr1 + arr2))
+    merged_array.sort()
+    return merged_array
+
+# Input
+n1 = int(input())
+arr1 = [int(input()) for _ in range(n1)]
+n2 = int(input())
+arr2 = [int(input()) for _ in range(n2)]
+
+# Merging arrays and removing duplicates
+result = merge_arrays(arr1, arr2)
