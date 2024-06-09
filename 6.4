@@ -1,0 +1,16 @@
+def count_frequency(arr):
+    freq_dict = {}
+    for num in arr:
+        if num in freq_dict:
+            freq_dict[num] += 1
+        else:
+            freq_dict[num] = 1
+    
+    for num, freq in freq_dict.items():
+        print(f"{num} occurs {freq} times")
+# Input
+n = int(input().strip())
+arr = [int(input().strip()) for _ in range(n)]
+
+# Counting frequency of each element
+count_frequency(arr)
