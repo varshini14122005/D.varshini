@@ -1,0 +1,4 @@
+num_friends = int(input())
+chocolates = [int(input()) for _ in range(4)]
+results = ['True' if chocolate % num_friends == 0 else 'False' for chocolate in chocolates]
+print(*results)
