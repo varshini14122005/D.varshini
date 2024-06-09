@@ -1,0 +1,16 @@
+def remove_chars(s1, s2):
+    result = ''
+    for char in s1:
+        if char not in s2:
+            result += char
+    return result
+
+# Sample Input
+s1 = input().strip()
+s2 = input().strip()
+
+# Removing characters from s1 which are present in s2
+result = remove_chars(s1, s2)
+
+# Output the result
+print(result)
