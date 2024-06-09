@@ -1,0 +1,15 @@
+def check_sum_existence(n, arr, k):
+    seen = set()
+    for num in arr:
+        if k - num in seen:
+            return "Yes"
+        seen.add(num)
+    return "No"
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+
+print(check_sum_existence(n, arr, k))
