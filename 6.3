@@ -1,0 +1,16 @@
+def find_index_mapping(A, B):
+    index_map = {}
+    for i, num in enumerate(B):
+        index_map[num] = i
+    return [index_map[num] for num in A]
+
+# Input
+n = int(input())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+# Finding index mapping
+result = find_index_mapping(A, B)
+
+# Output
+print(' '.join(map(str, result)))
