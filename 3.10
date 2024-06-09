@@ -1,0 +1,8 @@
+def lab_access(problems_given, problems_solved):
+    if problems_solved >= problems_given / 2:
+        return "IN"
+    else:
+        return "OUT"
+problems_given = int(input())
+problems_solved = int(input())
+print(lab_access(problems_given, problems_solved))
