@@ -1,0 +1,24 @@
+def count_unique_pairs_with_difference(nums, k):
+    from collections import defaultdict
+
+    freq = defaultdict(int)
+    count = 0
+
+    for num in nums:
+        if (num - k) in freq:
+            count += freq[num - k]
+       
+        if k != 0 and (num + k) in freq:
+            count += freq[num + k]
+       
+        freq[num] += 1
+
+    return count
+
+n = int(input())
+nums = list(map(int, input().split()))
+k = int(input())
+
+result = count_unique_pairs_with_difference(nums, k)
+
+print(result)
