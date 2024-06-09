@@ -1,0 +1,17 @@
+def calculate_average_marks(N, column_names, student_data):
+    marks_index = column_names.index('MARKS')
+    total_marks = 0
+
+    for student in student_data:
+      total_marks += int(student.split()[marks_index])
+
+    average_marks = total_marks / N
+    return round(average_marks, 2)
+
+# Input
+N = int(input())
+column_names = input().split()
+student_data = [input() for _ in range(N)]
+
+# Output
+print(calculate_average_marks(N, column_names, student_data))
