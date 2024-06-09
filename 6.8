@@ -1,0 +1,9 @@
+# Input
+n = int(input().strip())  # array length
+arr = [int(input().strip()) for _ in range(n)]  # array elements
+
+# Storing distinct elements in a set
+distinct_elements = set(arr)
+
+# Output
+print(' '.join(map(str, sorted(distinct_elements))))
